@@ -2,6 +2,20 @@
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "AllowsPrincipalToChangeItsOwnCredentials",
+      "Action": [
+        "iam:ChangePassword",
+        "iam:CreateAccessKey",
+        "iam:DeleteAccessKey",
+        "iam:UpdateAccessKey"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:iam::*:user/${aws:username}"
+      ]
+    },
+    {
+      "Sid": "ReadOnlyActionsForSecurityAuditing",
       "Action": [
         "acm:ListCertificates",
         "acm:DescribeCertificate",
