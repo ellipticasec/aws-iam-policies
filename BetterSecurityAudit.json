@@ -97,6 +97,7 @@
         "glacier:ListVaults",
         "health:Describe*",
         "iam:GenerateCredentialReport",
+        "iam:GenerateServiceLastAccessedDetails",
         "iam:Get*",
         "iam:List*",
         "iam:Simulate*",
